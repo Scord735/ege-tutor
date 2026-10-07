@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE-TUTOR // HOME</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="profile.html">профиль</a>
+        <a href="subjects.html">предметы</a>
+        <a href="errors.html">ошибки</a>
+        <a href="planner.html">планировщик</a>
+        <a href="chat.html">чат с ии</a>
+    </nav>
+
+    <div class="container">
+        <div class="bootline">
+            <span>&gt;</span> SYSTEM BOOT... <span>OK</span><br>
+            <span>&gt;</span> MEMORY CHECK... <span>OK</span><br>
+            <span>&gt;</span> LOADING EGE-TUTOR... <span>DONE</span>
+        </div>
+
+        <h1>ЕГЭ-тренажёр</h1>
+        <p class="subtitle">personal education system // v1.0</p>
+
+        <div id="dashboardContainer">
+            <div class="placeholder">[ загрузка... ]</div>
+        </div>
+
+        <div class="card">
+            <p id="message" data-type data-delay="800">Проверь связь с сервером кнопкой ниже.</p>
+            <button id="checkBtn">Проверить связь</button>
+        </div>
+
+        <p class="footer">главная // этап 15</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

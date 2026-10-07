@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE-TUTOR // PROFILE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="profile.html">профиль</a>
+        <a href="subjects.html">предметы</a>
+        <a href="errors.html">ошибки</a>
+        <a href="planner.html">планировщик</a>
+        <a href="chat.html">чат с ии</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Профиль ученика</h1>
+        <p class="page-subtitle">// персональные данные</p>
+
+        <!-- ID-КАРТА -->
+        <div class="section">
+            <div class="section-title">ID-карта</div>
+
+            <div id="viewMode">
+                <div class="field">
+                    <span class="field-label">имя</span>
+                    <span class="field-value" id="studentName">—</span>
+                </div>
+                <div class="field">
+                    <span class="field-label">класс</span>
+                    <span class="field-value" id="studentGrade">—</span>
+                </div>
+                <div class="field">
+                    <span class="field-label">цель (баллы ЕГЭ)</span>
+                    <span class="field-value" id="studentTarget">—</span>
+                </div>
+                <div class="field">
+                    <span class="field-label">дата регистрации</span>
+                    <span class="field-value" id="studentCreated">—</span>
+                </div>
+                <div style="margin-top:20px;">
+                    <button id="editStudentBtn">Редактировать</button>
+                </div>
+            </div>
+
+            <div id="editMode" style="display:none;">
+                <div class="field">
+                    <span class="field-label">имя</span>
+                    <input type="text" id="inputName" class="input" placeholder="Иван">
+                </div>
+                <div class="field">
+                    <span class="field-label">класс</span>
+                    <input type="number" id="inputGrade" class="input" placeholder="11" min="1" max="11">
+                </div>
+                <div class="field">
+                    <span class="field-label">цель (баллы ЕГЭ)</span>
+                    <input type="number" id="inputTarget" class="input" placeholder="90" min="0" max="100">
+                </div>
+                <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+                    <button id="saveStudentBtn">Сохранить</button>
+                    <button id="cancelEditBtn">Отмена</button>
+                </div>
+                <pre id="formMessage" class="server-response"></pre>
+            </div>
+        </div>
+
+        <!-- ОБЩИЙ ПРОГРЕСС -->
+        <div class="section">
+            <div class="section-title">общий прогресс</div>
+            <div id="totalProgress">
+                <div class="placeholder">[ загрузка... ]</div>
+            </div>
+        </div>
+
+        <!-- ПРОГРЕСС ПО ПРЕДМЕТАМ -->
+        <div class="section">
+            <div class="section-title">по предметам</div>
+            <div id="subjectProgress">
+                <div class="placeholder">[ загрузка... ]</div>
+            </div>
+        </div>
+
+        <!-- СЛАБЫЕ ТЕМЫ -->
+        <div class="section">
+            <div class="section-title">слабые темы</div>
+            <div id="weakTopicsProfile">
+                <div class="placeholder">[ загрузка... ]</div>
+            </div>
+        </div>
+
+        <p class="footer">профиль // этап 5+ — статистика</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

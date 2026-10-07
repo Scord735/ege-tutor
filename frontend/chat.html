@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE-TUTOR // AI CHAT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wide">
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="profile.html">профиль</a>
+        <a href="subjects.html">предметы</a>
+        <a href="errors.html">ошибки</a>
+        <a href="planner.html">планировщик</a>
+        <a href="chat.html">чат с ии</a>
+    </nav>
+
+    <div class="container container-wide">
+        <h1 class="page-title">Чат с ИИ-наставником</h1>
+        <p class="page-subtitle">// видит твои ошибки и слабые темы</p>
+
+        <div class="global-chat">
+            <!-- Область сообщений -->
+            <div id="chatMessages" class="global-chat-messages">
+                <div class="chat-placeholder" id="chatPlaceholder">
+                    <div class="empty-title">привет!</div>
+                    <div class="empty-hint">
+                        я знаю твою последнюю тему, ошибки за неделю и слабые места.<br>
+                        спроси что угодно — например: «что мне подтянуть?» или «объясни логарифмы»
+                    </div>
+                </div>
+            </div>
+
+            <!-- Быстрые кнопки -->
+            <div class="global-chat-quick">
+                <button class="tutor-quick-btn" data-q="Что мне подтянуть в первую очередь?">Что подтянуть?</button>
+                <button class="tutor-quick-btn" data-q="Какие у меня слабые темы за неделю?">Слабые темы</button>
+                <button class="tutor-quick-btn" data-q="Проанализируй мои ошибки и дай совет.">Разбор ошибок</button>
+                <button class="tutor-quick-btn" data-q="Как готовиться к ЕГЭ по математике?">Совет по матем.</button>
+            </div>
+
+            <!-- Ввод -->
+            <div class="global-chat-input-row">
+                <textarea id="chatInput" class="global-chat-input" rows="1"
+                          placeholder="Твой вопрос... (Enter — отправить, Shift+Enter — новая строка)"></textarea>
+                <button id="sendBtn" class="global-chat-send">Отправить</button>
+            </div>
+        </div>
+
+        <p class="footer">чат с ии // этап 14</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

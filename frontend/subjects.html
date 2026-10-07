@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE-TUTOR // SUBJECTS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="wide">
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="profile.html">профиль</a>
+        <a href="subjects.html">предметы</a>
+        <a href="errors.html">ошибки</a>
+        <a href="planner.html">планировщик</a>
+        <a href="chat.html">чат с ии</a>
+    </nav>
+
+    <div class="container container-wide">
+        <h1 class="page-title">Предметы и темы</h1>
+        <p class="page-subtitle">// curriculum map</p>
+
+        <div class="subjects-split">
+            <!-- ЛЕВАЯ КОЛОНКА: предметы и задания -->
+            <aside class="subject-sidebar" id="subjectsSidebar">
+                <div class="placeholder">[ загрузка... ]</div>
+            </aside>
+
+            <!-- ПРАВАЯ ПАНЕЛЬ: темы выбранного задания -->
+            <main class="topic-panel" id="topicPanel">
+                <div class="topic-panel-empty">
+                    <div class="empty-title">выбери задание</div>
+                    <div class="empty-hint">← клик по номеру слева</div>
+                </div>
+            </main>
+        </div>
+
+        <p class="footer">предметы // этап 6.1 — двухпанельный режим</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

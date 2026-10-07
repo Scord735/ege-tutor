@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE-TUTOR // PLANNER</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">главная</a>
+        <a href="profile.html">профиль</a>
+        <a href="subjects.html">предметы</a>
+        <a href="errors.html">ошибки</a>
+        <a href="planner.html">планировщик</a>
+        <a href="chat.html">чат с ии</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Планировщик дня</h1>
+        <p class="page-subtitle">// 06.10.2026 → 31.05.2027</p>
+
+        <div class="section">
+            <div class="section-title">дата</div>
+            <div class="field">
+                <span class="field-label">выбери день</span>
+                <input type="date" id="dateInput" class="input"
+                       min="2026-10-06" max="2027-05-31"
+                       value="2026-10-06">
+            </div>
+            <div style="display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;">
+                <button id="loadTodayBtn">Сегодня</button>
+                <button id="loadDateBtn">Загрузить день</button>
+                <button id="prevDayBtn">← Пред</button>
+                <button id="nextDayBtn">След →</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">план дня</div>
+            <div id="planContainer">
+                <div class="placeholder">[ выбери дату и нажми «Загрузить день» ]</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">фазы обучения</div>
+            <div id="phasesContainer">
+                <div class="placeholder">[ загрузка... ]</div>
+            </div>
+        </div>
+
+        <p class="footer">планировщик // этап 11 — план из pdf</p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <div id="glitchOverlay"></div>
+</body>
+</html>
